@@ -14,7 +14,7 @@ public interface ProductRepository extends ElasticsearchRepository<Product, Stri
 	
 	Product save(Product product);
 	
-	Boolean delete(Product product);
+	void delete(Product product);
 	
 	List<Product> findAll();
 }

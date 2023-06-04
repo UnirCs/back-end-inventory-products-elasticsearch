@@ -37,7 +37,8 @@ public class DataAccessRepository {
 	}
 
 	public Boolean delete(Product product) {
-		return productRepository.delete(product);
+		productRepository.delete(product);
+		return Boolean.TRUE;
 	}
 
 	public List<Product> findProducts(String name, String description, String country, Boolean aggregate) {
