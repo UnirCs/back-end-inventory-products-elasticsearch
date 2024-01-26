@@ -1,13 +1,12 @@
 package com.unir.products.service;
 
-import java.util.List;
-
-import com.unir.products.model.pojo.Product;
+import com.unir.products.model.db.Product;
 import com.unir.products.model.request.CreateProductRequest;
+import com.unir.products.model.response.ProductsQueryResponse;
 
 public interface ProductsService {
-	
-	List<Product> getProducts(String name, String description, String country, Boolean aggregate);
+
+	ProductsQueryResponse getProducts(String name, String description, String country, Boolean aggregate);
 	
 	Product getProduct(String productId);
 	

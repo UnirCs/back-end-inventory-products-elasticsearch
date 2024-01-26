@@ -1,27 +1,24 @@
 package com.unir.products.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.unir.products.model.response.ProductsQueryResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.unir.products.data.DataAccessRepository;
-import com.unir.products.model.pojo.Product;
+import com.unir.products.model.db.Product;
 import com.unir.products.model.request.CreateProductRequest;
 
 @Service
+@RequiredArgsConstructor
 public class ProductsServiceImpl implements ProductsService {
 
-	@Autowired
-	private DataAccessRepository repository;
+	private final DataAccessRepository repository;
 
 	@Override
-	public List<Product> getProducts(String name, String description, String country, Boolean aggregate) {
-
+	public ProductsQueryResponse getProducts(String name, String description, String country, Boolean aggregate) {
 		//Ahora por defecto solo devolvera productos visibles
-		List<Product> products = repository.findProducts(name, description, country, aggregate);
-		return products.isEmpty() ? null : products;
+		return repository.findProducts(name, description, country, aggregate);
 	}
 
 	@Override
@@ -33,7 +30,6 @@ public class ProductsServiceImpl implements ProductsService {
 	public Boolean removeProduct(String productId) {
 
 		Product product = repository.findById(productId).orElse(null);
-
 		if (product != null) {
 			repository.delete(product);
 			return Boolean.TRUE;

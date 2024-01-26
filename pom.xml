@@ -8,7 +8,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.unir</groupId>
-	<artifactId>inventory-products</artifactId>
+	<artifactId>inventory-products-elasticsearch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>products</name>
 	<description>Aplicación que gestiona los productos de una tienda - Usando Elasticsearch</description>

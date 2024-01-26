@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
-import com.unir.products.model.pojo.Product;
+import com.unir.products.model.db.Product;
 
 public interface ProductRepository extends ElasticsearchRepository<Product, String> {
 

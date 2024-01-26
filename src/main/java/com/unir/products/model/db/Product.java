@@ -1,4 +1,4 @@
-package com.unir.products.model.pojo;
+package com.unir.products.model.db;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
