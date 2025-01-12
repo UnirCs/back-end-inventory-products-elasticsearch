@@ -1,7 +1,7 @@
 ## Configuracion de Spring
 spring:
   application:
-    name: ms-inventory-products
+    name: ms-inventory-products-elasticsearch
 
 ## Configuracion de Instancia 
 server:
