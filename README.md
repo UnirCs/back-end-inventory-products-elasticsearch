@@ -9,3 +9,4 @@ Recuerda que para cargar los datos de prueba debes ejecutar el siguiente comando
 ```bash
 curl -XPUT '<<Full Access URL de Bonsai>>/_bulk' --data-binary @Products_raw.json -H 'Content-Type: application/json'
 ```
+No es necesario que crees el índice manualmente, Spring Data Elasticsearch lo hará por ti (gracias a la anotación `@Document`).
