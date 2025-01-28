@@ -1,4 +1,4 @@
-package com.unir.products.model.db;
+package com.unir.products.data.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;

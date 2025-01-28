@@ -1,10 +1,8 @@
 package com.unir.products.controller;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 
-import com.unir.products.model.response.ProductsQueryResponse;
+import com.unir.products.controller.model.ProductsQueryResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.unir.products.model.db.Product;
-import com.unir.products.model.request.CreateProductRequest;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.CreateProductRequest;
 import com.unir.products.service.ProductsService;
 
 import lombok.RequiredArgsConstructor;

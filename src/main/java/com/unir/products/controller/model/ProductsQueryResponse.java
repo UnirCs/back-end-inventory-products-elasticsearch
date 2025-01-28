@@ -1,13 +1,12 @@
-package com.unir.products.model.response;
+package com.unir.products.controller.model;
 
-import com.unir.products.model.db.Product;
+import com.unir.products.data.model.Product;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Map;
 
 @AllArgsConstructor
 @NoArgsConstructor

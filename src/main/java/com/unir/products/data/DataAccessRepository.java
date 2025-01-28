@@ -1,11 +1,10 @@
 package com.unir.products.data;
 
-import java.net.InetAddress;
 import java.util.*;
 
-import com.unir.products.model.db.Product;
-import com.unir.products.model.response.AggregationDetails;
-import com.unir.products.model.response.ProductsQueryResponse;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.AggregationDetails;
+import com.unir.products.controller.model.ProductsQueryResponse;
 import lombok.SneakyThrows;
 import org.apache.commons.lang.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
@@ -83,11 +82,13 @@ public class DataAccessRepository {
 
         if (aggregate) {
             nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms("Country Aggregation").field("country").size(1000));
+            // Mas info sobre size 1000 - https://www.elastic.co/guide/en/elasticsearch/reference/7.10/search-aggregations-bucket-terms-aggregation.html#search-aggregations-bucket-terms-aggregation-size
             nativeSearchQueryBuilder.withMaxResults(0);
         }
 
         //Opcionalmente, podemos paginar los resultados
         //nativeSearchQueryBuilder.withPageable(PageRequest.of(0, 10));
+        //Pagina 0, 10 elementos por pagina. El tam de pagina puede venir como qParam y tambien el numero de pagina
 
         Query query = nativeSearchQueryBuilder.build();
         SearchHits<Product> result = elasticClient.search(query, Product.class);

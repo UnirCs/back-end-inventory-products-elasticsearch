@@ -1,8 +1,8 @@
 package com.unir.products.service;
 
-import com.unir.products.model.db.Product;
-import com.unir.products.model.request.CreateProductRequest;
-import com.unir.products.model.response.ProductsQueryResponse;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.CreateProductRequest;
+import com.unir.products.controller.model.ProductsQueryResponse;
 
 public interface ProductsService {
 

@@ -1,13 +1,13 @@
 package com.unir.products.service;
 
-import com.unir.products.model.response.ProductsQueryResponse;
+import com.unir.products.controller.model.ProductsQueryResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.unir.products.data.DataAccessRepository;
-import com.unir.products.model.db.Product;
-import com.unir.products.model.request.CreateProductRequest;
+import com.unir.products.data.model.Product;
+import com.unir.products.controller.model.CreateProductRequest;
 
 @Service
 @RequiredArgsConstructor
